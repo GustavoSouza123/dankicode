@@ -1,5 +1,4 @@
 <?php
-
     class Filha {
         public function printHello() {
             echo "Hello World!<br>";
@@ -39,5 +38,4 @@
 
     // override
     $pai->printHello();
-
 ?>
