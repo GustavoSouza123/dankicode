@@ -17,8 +17,9 @@ form {
     padding: 50px 30px;
 }
 
-form:first-child {
-    border-right: 1px solid #000;
+form:nth-child(2) {
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
 }
 
 form h2 {
@@ -26,7 +27,6 @@ form h2 {
 }
 
 form input {
-    padding: 0 3px;
     outline: none;
 }
 
@@ -35,7 +35,4 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-input[type="number"] {
-    -moz-appearance: textfield;
 }
