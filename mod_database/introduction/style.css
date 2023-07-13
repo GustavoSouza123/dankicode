@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+}
+
+form {
+    padding: 50px 30px;
+}
+
+form:first-child {
+    border-right: 1px solid #000;
+}
+
+form h2 {
+    margin-bottom: 20px;
+}
+
+form input {
+    padding: 0 3px;
+    outline: none;
+}
+
+/* remover as setas dos inputs type number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
