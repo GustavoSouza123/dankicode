@@ -1,7 +1,7 @@
 <?php
     $pdo = new PDO('mysql:host=localhost;dbname=mod_dankicode', 'root', '');
     
-    // seleciona todos os posts com seus títulos e conteúdos
+    // seleciona os posts da respectiva categoria (recebida pela url via metodo GET)
     /*
     $sql = $pdo->prepare("SELECT * FROM posts WHERE categoria_id = ?");
     $sql->execute(array($_GET['categoria_id']));
@@ -15,7 +15,7 @@
     }
     */
 
-    // seleciona os posts da respectiva categoria
+    // seleciona as categorias com seus respectivos posts
     /*
     $sql = $pdo->prepare("SELECT * FROM categorias");
     $sql->execute();
