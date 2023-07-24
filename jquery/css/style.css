@@ -3,3 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.content {
+    padding: 30px;
+    background-color: #eee;
+}
