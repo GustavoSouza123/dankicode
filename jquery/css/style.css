@@ -17,3 +17,10 @@ textarea {
     outline: none;
     padding: 5px;
 }
+
+.modal {
+    width: 500px;
+    height: 500px;
+    background-color: #0f0;
+    margin: 50px auto;
+}
