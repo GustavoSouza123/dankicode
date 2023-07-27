@@ -30,6 +30,11 @@
                     <li><a href="">Contato</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav class="mobile">
                 <ul>
                     <li><a href="">Início</a></li>
@@ -44,9 +49,10 @@
 
     <section class="banner">
         <div class="center">
+            <div class="opacity"></div>
             <form action="" method="">
                 <h2>Qual o seu melhor e-mail?</h2>
-                <input type="email" name="email" required />
+                <input type="email" name="email" required /><br>
                 <input type="submit" name="submit" value="Cadastrar" />
             </form>
         </div>
@@ -59,8 +65,8 @@
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
-            <div class="w50">
-                <img class="me" src="images/profile_photo.jpg" alt="Imagem do Gustavo Souza" />
+            <div class="w50 image">
+                <img class="me" src="images/profile-photo.jpg" alt="Imagem do Gustavo Souza" />
             </div>
         </div>
     </section>
@@ -68,20 +74,22 @@
     <section class="expertise">
         <div class="center">
             <h2 class="title">Especialidades</h2>
-            <div class="w33 box">
-                <img class="logo" src="images/html-5.png" alt="HTML5 logo" /> <!-- icon -->
-                <h3>HTML5</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            </div>
-            <div class="w33 box">
-                <img class="logo" src="images/css-3.png" alt="CSS3 logo" /> <!-- icon -->
-                <h3>CSS</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            </div>
-            <div class="w33 box">
-                <img class="logo" src="images/js.png" alt="JavaScript logo" /> <!-- icon -->
-                <h3>JavaScript</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <div class="boxes">
+                <div class="w33 box">
+                    <img class="logo" src="images/html-5.png" alt="HTML5 logo" /> <!-- icon -->
+                    <h3>HTML5</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="w33 box">
+                    <img class="logo" src="images/css-3.png" alt="CSS3 logo" /> <!-- icon -->
+                    <h3>CSS</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="w33 box">
+                    <img class="logo" src="images/js.png" alt="JavaScript logo" /> <!-- icon -->
+                    <h3>JavaScript</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -118,9 +126,10 @@
     </section>
 
     <footer>
-        <div class="center">
-            <p>Todos os direitos reservados</p>
-        </div>
+        <p>Todos os direitos reservados</p>
     </footer>
+
+    <!-- scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
