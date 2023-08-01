@@ -12,6 +12,5 @@ $(function() {
         } else {
             console.log('este email nao é gmail');
         }
-
     })
 })
