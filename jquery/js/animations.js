@@ -8,7 +8,7 @@ $(function() {
     */
 
     $('.box1').click(function() {
-        $('.box2').slideToggle(500, function() {
+        $('.box2').slideToggle(200, function() {
             location.href = 'https://www.google.com';
         });
     })
