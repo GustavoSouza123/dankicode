@@ -1,6 +1,6 @@
 $(function() {
     $('body').on('click', 'a', function() {
-        alert('ola mundo')
+        alert('ola mundo');
         return false;
     })
 
