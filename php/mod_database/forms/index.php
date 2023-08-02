@@ -1,6 +1,7 @@
 <?php
     date_default_timezone_set('America/Sao_Paulo');
-    $pdo = new PDO('mysql:host=localhost;dbname=mod_dankicode', 'root', '');
+    // $pdo = new PDO('mysql:host=localhost;dbname=mod_dankicode', 'root', '');
+    $pdo = new PDO('mysql:host=localhost;dbname=form_teste', 'root', '');
     $confirmacao = '';
 
     if(isset($_POST['cadastrar'])) {
