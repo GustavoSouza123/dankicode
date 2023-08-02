@@ -1,7 +1,7 @@
 $(function() {
     var func = function() {
         // $(this).css('background', 'red');
-        $('input[type=text]').eq($(this).index()).css('background', 'red');  
+        $('input').eq($(this).index()).css('background', 'red');  
         console.log($(this).index());
     }
 

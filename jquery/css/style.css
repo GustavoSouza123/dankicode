@@ -24,3 +24,16 @@ textarea {
     background-color: #0f0;
     margin: 50px auto;
 }
+
+.box {
+    width: 100%;
+    padding: 40px 3%;
+    background-color: #ccc;
+    color: #000;
+    text-align: center;
+}
+
+.box2 {
+    display: none;
+    background-color: green;
+}
