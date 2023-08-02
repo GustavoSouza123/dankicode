@@ -31,8 +31,13 @@ textarea {
     background-color: #ccc;
     color: #000;
     text-align: center;
+    transition: .2s;
 }
 
 .box2 {
     background-color: green;
+}
+
+.teste {
+    color: red;
 }
