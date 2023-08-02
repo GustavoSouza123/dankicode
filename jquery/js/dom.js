@@ -31,6 +31,6 @@ $(function() {
 
     // remover elemento da página
     $('button').click(function() {
-        $('.box').remove();
+        $('.box').eq(0).remove();
     });
 })
