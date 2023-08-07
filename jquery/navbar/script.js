@@ -14,7 +14,9 @@ $(function() {
                 'error': function(jqXHR, textStatus, errorThrown) {
                     // console.log(jqXHR);
                     if(jqXHR.status == 404) {
-                        console.log(jqXHR.status+': página não encontrada');
+                        let err = jqXHR.status+': página não encontrada';
+                        console.log(err);
+                        $('.container').html(err);
                     }
                 },
                 'success': function(data) {
