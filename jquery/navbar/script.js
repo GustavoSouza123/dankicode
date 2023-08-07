@@ -9,8 +9,8 @@ $(function() {
                     console.log('chamando o before send');
                 },
                 'timeout': 10000,
-                'method':'GET',
-                'url':href,
+                'url': href,
+                'method': 'GET',
                 'error': function(jqXHR, textStatus, errorThrown) {
                     // console.log(jqXHR);
                     if(jqXHR.status == 404) {
