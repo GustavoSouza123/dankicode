@@ -6,15 +6,16 @@
 
 body {
     min-height: 100vh;
+    font-family: 'Segoe UI';
+    font-weight: 300;
 }
 
 .slider {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    height: 600px;
-    background-color: red;
+    height: 100vh;
     margin: 0 auto;
+    background-color: #666;
 }
 
 .slider img {
@@ -23,7 +24,69 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 80%;
+    max-height: 80%;
+}
 
+.bullets-nav {
+    position: absolute;
+    z-index: 99;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+}
+
+.bullets-nav span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 0 10px;
+    box-shadow: 0px 0px 5px 0px #666;
+    transition: .2s;
+}
+
+.bullets-nav span:first-child {
+    background-color: #000;
+}
+
+.previous,
+.next {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10%;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.previous {
+    left: 0;
+    justify-content: flex-end;
+}
+
+.next {
+    right: 0;
+}
+
+.previous span,
+.next span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-bottom: 8px;
+    transition: .2s;
+}
+
+.previous span:hover,
+.next span:hover {
+    background-color: rgba(0,0,0,.1);
 }
