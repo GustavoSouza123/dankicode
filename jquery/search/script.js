@@ -1,4 +1,3 @@
-
 $(function() {
     var range = $('.filter-area input[type="range"]');
     var maxValue = 70000;
