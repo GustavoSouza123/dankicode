@@ -16,7 +16,7 @@ $(function() {
     $('a').click(function() {
         var link = $(this).attr('class');
         $('html, body').animate({
-            'scrollTop': $('#'+link).offset().top-50,
+            'scrollTop': $('section#'+link).offset().top-50,
         }, 500);
 
         return false;
