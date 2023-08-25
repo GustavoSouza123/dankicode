@@ -56,6 +56,10 @@ body {
     margin-bottom: 50px;
 }
 
+.slide img {
+    max-width: 100%;
+}
+
 
 /* slick styles */
 
@@ -67,7 +71,7 @@ body {
 .slick-arrow {
     position: absolute;
     z-index: 999;
-    top: 50%;
+    top: calc(50% - 25px);
     transform: translateY(-50%);
     background: transparent;
     width: 20px;
@@ -119,7 +123,6 @@ body {
     margin: 0 10px;
     background-color: rgba(0,0,0,.3);
     cursor: pointer;
-    transition: .2s;
 }
 
 .slick-dots li.slick-active button,
