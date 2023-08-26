@@ -14,8 +14,9 @@
 
         return this.each(function() {
             if($(this).html() == 'Goodbye World') {
-                $(this).html('Adeus Mundo');
-                $(this).css('color', 'red');
+                $(this)
+                    .html('Adeus Mundo')
+                    .css('color', 'red');
             }
         });
     }
