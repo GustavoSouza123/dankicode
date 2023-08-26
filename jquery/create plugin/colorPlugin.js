@@ -1,13 +1,22 @@
-// plugin para modificar a cor de um elemento
+// plugin to change some styles of an element
 
-$.fn.aplicarCor = function(options) {
-    var settings = $.extend({
-        color: '#00f',
-        backgroundColor: 'white'
-    }, options);
+(function($) {
+    $.fn.changeStyles = function(options) {
+        var settings = $.extend({
+            color: '#00f',
+            backgroundColor: 'white'
+        }, options);
 
-    return this.css({
-        color: settings.color,
-        backgroundColor: settings.backgroundColor
-    });
-}
+        this.css({
+            color: settings.color,
+            backgroundColor: settings.backgroundColor
+        });
+
+        return this.each(function() {
+            if($(this).html() == 'Goodbye World') {
+                $(this).html('Adeus Mundo');
+                $(this).css('color', 'red');
+            }
+        });
+    }
+})(jQuery);
