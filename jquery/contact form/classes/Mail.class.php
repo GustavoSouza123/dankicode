@@ -4,16 +4,16 @@
 	class Mail{
 
 		public $opt,$mailer;
-		public $email = 'SEUEMAIL';//Trocar e-mail aqui!
-		public $senha = 'SUASENHA';//Trocar senha aqui!
+		public $email = 'gustavoelia7@gmail.com'; // Seu e-mail aqui!
+		public $senha = 'regu181310regu'; // Sua senha aqui!
 
 		public function __construct(Array $parametros){
 			include('classes/phpmailer/PHPMailerAutoload.php');
 			$this->mailer = new PHPMailer();
 
 			$this->mailer->IsSMTP();
-			$this->mailer->Host = 'SEU SERVER SMTP'; //SERVIDOR SMTP DA HOSPEDAGEM
-			$this->mailer->Port = 465; //PORTA DO SMTP
+			$this->mailer->Host = 'smtp.gmail.com'; // SERVIDOR SMTP DA HOSPEDAGEM
+			$this->mailer->Port = 465; // PORTA DO SMTP
 			$this->mailer->SMTPDebug = 0;
 			$this->mailer->SMTPAuth = true;
 			$this->mailer->SMTPSecure = 'ssl';
@@ -23,13 +23,12 @@
 			$this->mailer->IsHTML(true);
 			$this->mailer->SingleTo = true;
 
-
 			$this->mailer->From = $this->email;
 			$this->mailer->FromName = $this->email;
 
-			$this->mailer->Subject = 'Nova mensagem do site!';
+			$this->mailer->Subject = 'Nova mensagem do site! (from localhost)';
 
-			$this->addAddress($this->email,'Administrador');
+			$this->addAddress($this->email, 'Administrador');
 
 			$body = '';
 			foreach ($parametros as $key => $value) {
