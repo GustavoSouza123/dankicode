@@ -4,20 +4,16 @@
 	class Mail{
 
 		public $opt,$mailer;
-		// public $email = 'SEUEMAIL';//Trocar e-mail aqui!
-		// public $senha = 'SUASENHA';//Trocar senha aqui!
-		public $email = 'gustavoelia7@gmail.com'; //mudei aqui
-		public $senha = 'regu181310'; //mudei aqui
+		public $email = 'SEUEMAIL';//Trocar e-mail aqui!
+		public $senha = 'SUASENHA';//Trocar senha aqui!
 
 		public function __construct(Array $parametros){
 			include('classes/phpmailer/PHPMailerAutoload.php');
 			$this->mailer = new PHPMailer();
 
 			$this->mailer->IsSMTP();
-			// $this->mailer->Host = 'SEU SERVER SMTP'; //SERVIDOR SMTP DA HOSPEDAGEM
-			// $this->mailer->Port = 465; //PORTA DO SMTP
-			$this->mailer->Host = 'localhost'; //mudei aqui
-			$this->mailer->Port = 80; //mudei aqui
+			$this->mailer->Host = 'SEU SERVER SMTP'; //SERVIDOR SMTP DA HOSPEDAGEM
+			$this->mailer->Port = 465; //PORTA DO SMTP
 			$this->mailer->SMTPDebug = 0;
 			$this->mailer->SMTPAuth = true;
 			$this->mailer->SMTPSecure = 'ssl';
@@ -33,7 +29,7 @@
 
 			$this->mailer->Subject = 'Nova mensagem do site!';
 
-			$this->addAdress($this->email,'Administrador');
+			$this->addAddress($this->email,'Administrador');
 
 			$body = '';
 			foreach ($parametros as $key => $value) {
@@ -44,7 +40,7 @@
 			$this->mailer->Body = $body;
 		}
 
-		public function addAdress($mail,$nome){
+		public function addAddress($mail,$nome){
 			$this->mailer->addAddress($mail,$nome);
 			return $this;
 		}
