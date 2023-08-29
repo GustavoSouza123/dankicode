@@ -8,16 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <form action="" method="post">
+        <form action="form.php" method="post">
             <h2>Entre em contato</h2>
-            <input type="text" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="Email" />
-            <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" placeholder="Message" cols="30" rows="10" required></textarea>
             <input type="submit" name="submitform" value="Submit" />
         </form>
     </div>
     
     <script src="../jquery/jquery.js"></script>
+    <script src="js/ajaxform.jquery.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
