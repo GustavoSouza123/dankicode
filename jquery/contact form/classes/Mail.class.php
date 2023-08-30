@@ -2,7 +2,7 @@
 	class Mail{
 		public $opt,$mailer;
 		public $email = 'gustavoelia7@gmail.com'; // Seu e-mail aqui!
-		public $senha = 'regu181310regu'; // Sua senha aqui!
+		public $senha = 'regura181310'; // Sua senha aqui!
 
 		public function __construct(Array $parametros){
 			include('classes/phpmailer/PHPMailerAutoload.php');
@@ -10,10 +10,10 @@
 
 			$this->mailer->IsSMTP();
 			$this->mailer->Host = 'smtp.gmail.com'; // SERVIDOR SMTP DA HOSPEDAGEM
-			$this->mailer->Port = 465; // PORTA DO SMTP
-			$this->mailer->SMTPDebug = 0;
+			$this->mailer->Port = 587; // PORTA DO SMTP
+			$this->mailer->SMTPDebug = 2;
 			$this->mailer->SMTPAuth = true;
-			$this->mailer->SMTPSecure = 'ssl';
+			$this->mailer->SMTPSecure = 'tls';
 			$this->mailer->Username = $this->email;
 			$this->mailer->Password = $this->senha;
 
@@ -43,11 +43,16 @@
 
 		public function sendMail(){
 			$this->mailer->CharSet = "utf-8";
-			if($this->mailer->send()){
-				return true;
-			}else{
-				return false;
+			try {
+				if($this->mailer->send()) {
+					return true;
+				} else {
+					return false;
+				}
+			} catch(Exception $e) {
+					echo "Message could not be sent. Mailer Error: {$this->mailer->ErrorInfo}";
+					return false;
+				}
 			}
 		}
-	}
 ?>
