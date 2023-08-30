@@ -1,6 +1,6 @@
 $(function() {
     $('form').ajaxForm({
-        'success': function() {
+        success: function() {
             alert('formulário enviado com sucesso');
         }
     });

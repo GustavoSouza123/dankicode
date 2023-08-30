@@ -1,8 +1,5 @@
 <?php
-
-
 	class Mail{
-
 		public $opt,$mailer;
 		public $email = 'gustavoelia7@gmail.com'; // Seu e-mail aqui!
 		public $senha = 'regu181310regu'; // Sua senha aqui!
@@ -26,9 +23,9 @@
 			$this->mailer->From = $this->email;
 			$this->mailer->FromName = $this->email;
 
-			$this->mailer->Subject = 'Nova mensagem do site! (from localhost)';
-
 			$this->addAddress($this->email, 'Administrador');
+			
+			$this->mailer->Subject = 'Nova mensagem do site! (from localhost)';
 
 			$body = '';
 			foreach ($parametros as $key => $value) {
@@ -52,8 +49,5 @@
 				return false;
 			}
 		}
-
-
 	}
-
 ?>
