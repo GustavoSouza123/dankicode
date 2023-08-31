@@ -10,10 +10,10 @@
 
 			$this->mailer->IsSMTP();
 			$this->mailer->Host = 'smtp.gmail.com'; // SERVIDOR SMTP DA HOSPEDAGEM
+			$this->mailer->SMTPSecure = 'tls';
 			$this->mailer->Port = 587; // PORTA DO SMTP
 			$this->mailer->SMTPDebug = 2;
 			$this->mailer->SMTPAuth = true;
-			$this->mailer->SMTPSecure = 'tls';
 			$this->mailer->Username = $this->email;
 			$this->mailer->Password = $this->senha;
 
@@ -29,8 +29,8 @@
 
 			$body = '';
 			foreach ($parametros as $key => $value) {
-				$body.=ucfirst($key).": ".$value;
-				$body.="<hr>";
+				$body .= ucfirst($key).": ".$value;
+				$body .= "<hr>";
 			}
 	
 			$this->mailer->Body = $body;
@@ -52,7 +52,7 @@
 			} catch(Exception $e) {
 					echo "Message could not be sent. Mailer Error: {$this->mailer->ErrorInfo}";
 					return false;
-				}
 			}
 		}
+	}
 ?>
