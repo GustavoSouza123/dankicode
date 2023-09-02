@@ -1,7 +1,7 @@
 // $(function() {
 //     $('form').ajaxForm({
 //         success: function() {
-//             alert('formulário enviado com sucesso');
+//             alert('form submitted successfully');
 //         }
 //     });
 // })
