@@ -2,26 +2,26 @@
 	class Mail{
 		public $opt,$mailer;
 		public $email = 'gustavoelia7@gmail.com'; // Seu e-mail aqui!
-		public $senha = 'regura181310'; // Sua senha aqui!
+		// public $senha = '********'; // Sua senha aqui!
 
 		public function __construct(Array $parametros){
 			include('classes/phpmailer/PHPMailerAutoload.php');
 			$this->mailer = new PHPMailer();
 
 			$this->mailer->IsSMTP();
-			$this->mailer->Host = 'smtp.gmail.com'; // SERVIDOR SMTP DA HOSPEDAGEM
+			$this->mailer->Host = 'sandbox.smtp.mailtrap.io'; // SERVIDOR SMTP
 			$this->mailer->SMTPSecure = 'tls';
-			$this->mailer->Port = 587; // PORTA DO SMTP
-			$this->mailer->SMTPDebug = 2;
+			$this->mailer->Port = 2525; // PORTA DO SMTP
+			$this->mailer->SMTPDebug = 0;
 			$this->mailer->SMTPAuth = true;
-			$this->mailer->Username = $this->email;
-			$this->mailer->Password = $this->senha;
+			$this->mailer->Username = 'f7cdfe30941438';
+			$this->mailer->Password = 'deb2ecd305f70d';
 
 			$this->mailer->IsHTML(true);
 			$this->mailer->SingleTo = true;
 
-			$this->mailer->From = $this->email;
-			$this->mailer->FromName = $this->email;
+			$this->mailer->From = $parametros['email'];
+			$this->mailer->FromName = $parametros['name'];
 
 			$this->addAddress($this->email, 'Administrador');
 			
@@ -44,11 +44,10 @@
 		public function sendMail(){
 			$this->mailer->CharSet = "utf-8";
 			try {
-				if($this->mailer->send()) {
-					return true;
-				} else {
-					return false;
-				}
+				$this->mailer->send();
+				echo "Email sent successfully!<br>";
+				echo "<a href='index.html'>Submit more emails</a>";
+				return true;
 			} catch(Exception $e) {
 					echo "Message could not be sent. Mailer Error: {$this->mailer->ErrorInfo}";
 					return false;
