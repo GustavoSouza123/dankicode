@@ -40,8 +40,6 @@
 			$this->mailer->CharSet = "utf-8";
 			try {
 				$this->mailer->send();
-				echo "Email sent successfully!<br>";
-				echo "<a href='index.html'>Submit more emails</a>";
 				return true;
 			} catch(Exception $e) {
 					echo "Message could not be sent. Mailer Error: {$this->mailer->ErrorInfo}";
