@@ -1,6 +1,6 @@
 <?php
-	class Mail{
-		public $opt,$mailer;
+	class Mail {
+		public $opt, $mailer;
 		public $email = 'gustavoelia7@gmail.com'; // my email
 		// public $senha = '********'; // my password
 
@@ -27,10 +27,15 @@
 			$this->mailer->SingleTo = true;
 			$this->mailer->Subject = 'Nova mensagem do site!';
 
-			$body = '';
+			$body = 'From: ' . $parameters['name'] . '&lt;' . $parameters['email'] . '&gt;';
+			$body .= '<hr>';
+			$body .= 'To: &lt;' . $this->email . '&gt;';
+			$body .= '<hr>';
 			foreach ($parameters as $key => $value) {
-				$body .= ucfirst($key).": ".$value;
-				$body .= "<hr>";
+				if($key != 'name' && $key != 'email') {
+					$body .= ucfirst($key).': '.$value;
+					$body .= '<hr>';
+				}
 			}
 	
 			$this->mailer->Body = $body;
