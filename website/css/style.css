@@ -44,7 +44,6 @@ h2, h3 {
 p, li {
     font-size: 15px;
     font-weight: 300;
-    word-spacing: 2px;
     line-height: 25px;
 }
 
@@ -148,7 +147,6 @@ nav.mobile {
 nav.mobile ul {
     flex-direction: column;
 }
-
 
 
 section.banner {
@@ -284,6 +282,7 @@ section.services .w50:last-child {
     padding-left: 5%;
 }
 
+
 footer {
     height: 70px;
     background-color: var(--light2);
@@ -297,6 +296,26 @@ footer p {
     font-weight: 400;
 }
 
+
+section.error-404 {
+    min-height: calc(100vh - 70px - 70px);
+    border-top: 1px solid var(--dark2);
+    padding: 50px 0;
+}
+
+section.error-404 .center {
+    flex-direction: column;
+}
+
+section.error-404 p {
+    margin-top: 10px;
+}
+
+section.error-404 a {
+    color: var(--light1);
+}
+
+/* responsiveness */
 
 @media only screen and (max-width: 1000px) {
     .w50 {
