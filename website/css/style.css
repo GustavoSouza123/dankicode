@@ -363,3 +363,21 @@ section.error-404 a {
         display: flex;
     }
 }
+
+@media only screen and (max-width: 450px) {
+    section.banner form {
+        width: 95%;
+    }
+
+    section.banner form h2 {
+        font-size: 20px;
+    }
+
+    section.banner form input {
+        width: 100%;
+    }
+
+    img.me {
+        max-height: 300px;
+    }
+}
