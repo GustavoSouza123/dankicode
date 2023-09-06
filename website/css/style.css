@@ -62,12 +62,16 @@ header .center {
 
 header .logo {
     font-size: 18px;
-    color: #fff;
     font-weight: 300;
 }
 
+header .logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .mobile {
-    display: none
+    display: none;
 }
 
 nav {
@@ -338,9 +342,5 @@ footer p {
 
     .menu-toggle {
         display: flex;
-    }
-
-    header nav.mobile {
-        display: block;
     }
 }

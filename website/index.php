@@ -20,7 +20,7 @@
 <body>
     <header>
         <div class="center">
-            <div class="logo">Logomarca</div>
+            <div class="logo"><a href="index.php">Logomarca</a></div>
             <nav class="desktop">
                 <ul>
                     <li><a href="">Início</a></li>
@@ -130,6 +130,7 @@
     </footer>
 
     <!-- scripts -->
+    <script src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

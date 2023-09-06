@@ -1,3 +1,6 @@
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-    document.querySelector('.menu-toggle').classList.toggle('active')
+$(function() {
+    $('.menu-toggle').click(function() {
+        $(this).toggleClass('active');
+        $('.mobile').slideToggle(200);
+    })
 })
