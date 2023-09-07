@@ -297,6 +297,18 @@ footer p {
 }
 
 
+#map {
+    /* width: 100%;
+    height: 400px; */
+}
+
+section.contact {
+    min-height: calc(100vh - 70px - 70px);
+    border-top: 1px solid var(--dark2);
+    padding: 50px 0;
+}
+
+
 section.error-404 {
     min-height: calc(100vh - 70px - 70px);
     border-top: 1px solid var(--dark2);
