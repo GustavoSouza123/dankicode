@@ -315,6 +315,17 @@ section.error-404 a {
     color: var(--light1);
 }
 
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.5);
+}
+
 /* responsiveness */
 
 @media only screen and (max-width: 1000px) {
