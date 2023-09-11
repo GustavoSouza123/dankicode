@@ -1,5 +1,13 @@
 <section class="banner">
     <div class="center">
+        <div class="banner-imgs">
+            <div class="banner-img"><img src="<?php echo INCLUDE_PATH; ?>images/main-slider-img1.jpg" alt="Banner image 1"></div>
+            <div class="banner-img"><img src="<?php echo INCLUDE_PATH; ?>images/main-slider-img2.jpg" alt="Banner image 2"></div>
+            <div class="banner-img"><img src="<?php echo INCLUDE_PATH; ?>images/main-slider-img3.jpg" alt="Banner image 3"></div>
+            <div class="banner-img"><img src="<?php echo INCLUDE_PATH; ?>images/main-slider-img4.jpg" alt="Banner image 4"></div>
+            <div class="banner-img"><img src="<?php echo INCLUDE_PATH; ?>images/main-slider-img5.jpg" alt="Banner image 5"></div>
+            <div class="banner-img"><img src="<?php echo INCLUDE_PATH; ?>images/main-slider-img6.jpg" alt="Banner image 6"></div>
+        </div>
         <div class="opacity"></div>
         <form action="" method="">
             <h2>Qual o seu melhor e-mail?</h2>

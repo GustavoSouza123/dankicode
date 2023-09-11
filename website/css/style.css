@@ -16,6 +16,7 @@
 body {
     background-color: var(--dark1);
     color: var(--light1);
+    overflow-x: hidden;
 }
 
 /* Boot CSS */
@@ -153,13 +154,36 @@ nav.mobile ul {
 
 section.banner {
     height: calc(100vh - 70px);
-    background-image: url(../images/main-banner.jpg);
-    background-size: cover;
 }
 
 section.banner .center {
     align-items: center;
     justify-content: center;
+}
+
+section.banner .banner-imgs {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+section.banner .banner-img {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.banner .banner-img img {
+    height: 100%;
+    max-width: 1280px;
 }
 
 section.banner .opacity {
@@ -169,7 +193,7 @@ section.banner .opacity {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.7);
 }
 
 section.banner form {
