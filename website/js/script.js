@@ -1,4 +1,5 @@
 $(function() {
+    // menu navbar
     $('html, body').click(function() {
         $('.menu-toggle').removeClass('active');
         $('.mobile').slideUp(200);
@@ -13,4 +14,11 @@ $(function() {
     $('.mobile').click(function(e) {
         e.stopPropagation();
     })
+
+    // smooth scroll
+    if($('target').length > 0) {
+        var el = '.'+$('target').attr('target');
+        var scroll = $('section'+el).offset().top;
+        $('html, body').animate({'scrollTop': scroll}, 500);
+    }
 })

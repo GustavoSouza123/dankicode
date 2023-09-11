@@ -9,7 +9,7 @@
     </div>
 </section>
 
-<section class="about">
+<section class="about sobre">
     <div class="center">
         <div class="w50">
             <h2>Gustavo Souza</h2>
@@ -22,7 +22,7 @@
     </div>
 </section>
 
-<section class="expertise">
+<section class="expertise especialidades">
     <div class="center">
         <h2 class="title">Especialidades</h2>
         <div class="boxes">
@@ -45,7 +45,7 @@
     </div>
 </section>
 
-<section class="services">
+<section class="services servicos">
     <div class="center">
         <div class="w50">
             <h2 class="title">Depoimentos</h2>
