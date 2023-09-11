@@ -20,6 +20,24 @@
     <title>Meu Website</title>
 </head>
 <body>
+    <?php
+        $url = (isset($_GET['url'])) ? $_GET['url'] : 'home';
+
+        switch($url) {
+            case 'sobre':
+                echo '<target target="sobre"></target>';
+                break;
+
+            case 'especialidades':
+                echo '<target target="especialidades"></target>';
+                break;
+
+            case 'servicos':
+                echo '<target target="servicos"></target>';
+                break;
+        }
+    ?>
+
     <header>
         <div class="center">
             <div class="logo"><a href="index.php">Logomarca</a></div>
@@ -50,12 +68,14 @@
     </header>
 
     <?php
-        $url = (isset($_GET['url'])) ? $_GET['url'] : 'home';
-
         if(file_exists('pages/'.$url.'.php')) {
             include('pages/'.$url.'.php');
         } else {
-            include('pages/404.php');
+            if($url != 'sobre' && $url != 'especialidades' && $url != 'servicos') {
+                include('pages/404.php');
+            } else {
+                include('pages/home.php');
+            }
         }
     ?>
 
@@ -64,7 +84,13 @@
     </footer>
 
     <!-- scripts -->
-    <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script> <!-- jQuery -->
     <script src="<?php echo INCLUDE_PATH; ?>js/script.js"></script>
+    <?php
+        if($url == 'contato') {
+    ?>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBtD4YdkDHevlF0iEoBpFGu1cdAslAHJ4s&callback=Function.prototype"></script> <!-- google maps -->
+    <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
+    <?php } ?>
 </body>
 </html>
