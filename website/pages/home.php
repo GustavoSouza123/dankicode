@@ -9,6 +9,7 @@
             <div class="banner-img"><img src="<?php echo INCLUDE_PATH; ?>images/main-slider-img6.jpg" alt="Banner image 6"></div>
         </div>
         <div class="opacity"></div>
+        <div class="bullets"></div>
         <form action="" method="">
             <h2>Qual o seu melhor e-mail?</h2>
             <input type="email" name="email" required /><br>
