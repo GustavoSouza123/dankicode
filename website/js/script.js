@@ -65,4 +65,27 @@ $(function() {
 
     initSlider()
     changeSlider();
+
+    // box loading
+    var currentBoxIndex = -1;
+    var maxBoxIndex = $('section.expertise .box').length -1;
+    boxDelay = 500;
+
+    var boxesInterval;
+    function boxesAnimation() {
+        $('section.expertise .box').hide();
+        boxesInterval = setInterval(animation, boxDelay);
+
+        function animation() {
+            currentBoxIndex++;
+            if(currentBoxIndex > maxBoxIndex) {
+                clearInterval(boxesInterval);
+                return false;
+            }
+
+            $('section.expertise .box').eq(currentBoxIndex).fadeIn(boxDelay);
+        }
+    }
+
+    // boxesAnimation();
 })
