@@ -40,7 +40,7 @@
 
     <header>
         <div class="center">
-            <div class="logo"><a href="index.php">Logomarca</a></div>
+            <div class="logo"><a href="home">Logomarca</a></div>
             <nav class="desktop">
                 <ul>
                     <li><a href="<?php echo INCLUDE_PATH; ?>home">Início</a></li>

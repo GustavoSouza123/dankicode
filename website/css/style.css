@@ -72,10 +72,6 @@ header .logo a {
     text-decoration: none;
 }
 
-.mobile {
-    display: none;
-}
-
 nav {
     height: 100%;
 }
@@ -137,9 +133,13 @@ nav ul li a:hover {
     transform: rotate(-225deg);
 }
 
+.mobile {
+    display: none;
+}
+
 nav.mobile {
     position: absolute;
-    z-index: 2;
+    z-index: 999;
     top: 70px;
     left: 0;
     right: 0;
