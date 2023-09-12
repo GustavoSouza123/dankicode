@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descrição do meu website">
     <meta name="keywords" content="palavras,chave,do,meu,website">
-    <meta rel="icon" href="<?php echo INCLUDE_PATH; ?>favicon.ico" type="image/x-icon"> <!--NOT WORKING-->
+    <link rel="icon" type="image/x-icon" href="<?php echo INCLUDE_PATH; ?>favicon.ico"> <!-- website icon -->
     
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,10 @@
 
     <header>
         <div class="center">
-            <div class="logo"><a href="home">Logomarca</a></div>
+            <div class="logo">
+                <a href="home">Logomarca</a>
+                <!-- <img src="<?php //echo INCLUDE_PATH; ?>images/logo.png" alt="Logo image" /> -->
+            </div>
             <nav class="desktop">
                 <ul>
                     <li><a href="<?php echo INCLUDE_PATH; ?>home">Início</a></li>
