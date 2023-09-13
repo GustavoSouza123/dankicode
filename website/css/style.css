@@ -300,10 +300,14 @@ section.expertise .boxes {
 
 section.expertise .box {
     text-align: center;
+    padding: 0 25px;
 }
 
-section.expertise .box:nth-child(2) {
-    padding: 0 50px;
+section.expertise .box:nth-child(3n+1) {
+    padding-left: 0;
+}
+section.expertise .box:nth-child(3n) {
+    padding-right: 0;
 }
 
 img.logo {
@@ -313,7 +317,7 @@ img.logo {
 }
 
 img.logo:hover {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 section.expertise .box h3 {

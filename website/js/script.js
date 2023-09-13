@@ -66,14 +66,14 @@ $(function() {
     initSlider()
     changeSlider();
 
-    // box loading
+    // expertise boxes loading
     var currentBoxIndex = -1;
     var maxBoxIndex = $('section.expertise .box').length -1;
     boxDelay = 500;
 
     var boxesInterval;
-    function boxesAnimation() {
-        $('section.expertise .box').hide();
+    function boxesLoading() {
+        $('section.expertise .box').css('opacity', '0');
         boxesInterval = setInterval(animation, boxDelay);
 
         function animation() {
@@ -83,9 +83,27 @@ $(function() {
                 return false;
             }
 
-            $('section.expertise .box').eq(currentBoxIndex).fadeIn(boxDelay);
+            $('section.expertise .box').eq(currentBoxIndex).animate({'opacity': '1'}, boxDelay);
         }
     }
 
-    // boxesAnimation();
+    boxesLoading();
+
+    // expertise boxes logo opacity animation
+    var currentLogo;
+    function boxesLogoAnimation() {
+        currentLogo = -1;
+        setInterval(function() {
+            currentLogo++
+            if(currentLogo > maxBoxIndex) {
+                currentLogo = 0;
+            }
+            $('section.expertise img.logo').eq(currentLogo).css('opacity', '1');
+            setTimeout(function() {
+                $('section.expertise img.logo').eq(currentLogo).css('opacity', '.5');
+            }, 500)
+        }, 1000)
+    }
+
+    setTimeout(boxesLogoAnimation, boxDelay * (maxBoxIndex+1));
 })
