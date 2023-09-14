@@ -39,6 +39,10 @@
         }
     ?>
 
+    <?php
+        // new Email();
+    ?>
+
     <header>
         <div class="center">
             <div class="logo">
