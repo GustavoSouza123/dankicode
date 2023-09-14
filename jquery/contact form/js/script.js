@@ -5,20 +5,20 @@ $(function() {
                 beforeSubmit: function() {
                     $('form input[type="submit"]').attr('disabled', 'true');
                     $('form input[type="submit"]').attr('value', 'Loading');
-                    $('form input[type="submit"]').animate({'opacity': '0.5'});
+                    $('form input[type="submit"]').animate({'opacity': '0.5'}, 200);
                 },
                 success: function() {
-                    $('.success').animate({'bottom': '50px', 'opacity': '1'});
-                    setTimeout(function() { $('.success').animate({'bottom': '-50px', 'opacity': '0'}); }, 3000);
+                    $('.success').animate({'bottom': '50px', 'opacity': '1'}, 200);
+                    setTimeout(function() { $('.success').animate({'bottom': '-50px', 'opacity': '0'}, 200); }, 3000);
                     $('form')[0].reset();
                     $('form input[type="submit"]').removeAttr('disabled');
                     $('form input[type="submit"]').attr('value', 'Submit');
-                    $('form input[type="submit"]').animate({'opacity': '1'});
+                    $('form input[type="submit"]').animate({'opacity': '1'}, 200);
                 }
             });
         } else {
-            $('.error').animate({'bottom': '50px', 'opacity': '1'});
-            setTimeout(function() { $('.error').animate({'bottom': '-50px', 'opacity': '0'}); }, 3000);
+            $('.error').animate({'bottom': '50px', 'opacity': '1'}, 200);
+            setTimeout(function() { $('.error').animate({'bottom': '-50px', 'opacity': '0'}, 200); }, 3000);
         }
     
         return false;

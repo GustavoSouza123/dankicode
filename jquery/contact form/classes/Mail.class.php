@@ -1,12 +1,12 @@
 <?php
 	class Mail {
 		public $opt, $mailer;
-		public $email = 'gustavoelia7@gmail.com'; // my email
-		// public $senha = '********'; // my password
 
 		public function __construct(Array $parameters){
 			include('classes/phpmailer/PHPMailerAutoload.php');
 			$this->mailer = new PHPMailer();
+			$email = 'gustavoelia7@gmail.com'; // my email
+			// $senha = '********'; // my password
 
 			// SMTP settings
 			$this->mailer->IsSMTP();
@@ -20,16 +20,17 @@
 
 			// Sender and recipient
 			$this->mailer->setFrom($parameters['email'], $parameters['name']);
-			$this->mailer->addAddress($this->email, 'Admin');
+			$this->mailer->addAddress($email, 'Admin');
+			$this->mailer->addReplyTo($email, 'Admin');
 
 			// Email content
 			$this->mailer->IsHTML(true);
 			$this->mailer->SingleTo = true;
 			$this->mailer->Subject = 'Nova mensagem do site!';
 
-			$body = 'From: ' . $parameters['name'] . '&lt;' . $parameters['email'] . '&gt;';
+			$body = 'From: ' . $parameters['name'] . ' &lt;' . $parameters['email'] . '&gt;';
 			$body .= '<hr>';
-			$body .= 'To: &lt;' . $this->email . '&gt;';
+			$body .= 'To: &lt;' . $email . '&gt;';
 			$body .= '<hr>';
 			foreach ($parameters as $key => $value) {
 				if($key != 'name' && $key != 'email') {
