@@ -255,6 +255,10 @@ section.banner form input[type="email"] {
     margin: 20px 0;
 }
 
+section.banner form input[type="email"]::placeholder {
+    color: #ff00009b;
+}
+
 section.banner form input[type="submit"] {
     background-color: var(--green);
     border: 1px solid var(--green);

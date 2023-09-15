@@ -1,7 +1,7 @@
 <?php
     // autoload classes
     $autoload = function($class) {
-        include('classes/'.$class.'.php');
+        require_once('classes/'.$class.'.php');
     };
     spl_autoload_register($autoload);
 
