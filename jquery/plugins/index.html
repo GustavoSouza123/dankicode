@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="jssocials/jssocials.css" /> <!--jssocials css-->
+    <link rel="stylesheet" href="plugins/jssocials/jssocials.css" /> <!--jssocials css-->
+    <link rel="stylesheet" href="plugins/jssocials/jssocials-theme-plain.css" /> <!--jssocials icons theme-->
     <script src="https://kit.fontawesome.com/52201d9086.js" crossorigin="anonymous"></script> <!--font awesome icons-->
-    <link rel="stylesheet" href="jssocials/jssocials-theme-classic.css" /> <!--jssocials icons theme-->
     <link rel="stylesheet" href="css/style.css" /> <!--css file-->
     <title>Plugins</title>
 </head>
 <body>
     <h1>Testing jQuery plugins</h1>
+
+    <h2>jssocials plugin</h2>
     <div class="share"></div>
+
+    <h2>mask plugin</h2>
+    <form action="" method="post">
+        <span>Telefone 1: </span><input type="text" name="telefone1" /><br>
+        <span>Telefone 2: </span><input type="text" name="telefone2" /><br>
+        <span>Data: </span><input type="text" name="data" /><br>
+        <span>Hora: </span><input type="text" name="hora" /><br>
+        <span>CPF: </span><input type="text" name="cpf" /><br>
+        <span>Dinheiro: </span><input type="text" name="dinheiro" /><br>
+        <span>Endereço IP: </span><input type="text" name="endereçoip" /><br>
+        <input type="submit" name="submit" value="Enviar" />
+    </form>
     
     <script src="../jquery/jquery.js"></script> <!--jquery api-->
-    <script src="jssocials/jssocials.min.js"></script>
+    <script src="plugins/jssocials/jssocials.min.js"></script> <!--jssocials plugin-->
+    <script src="plugins/jQuery Mask Plugin/jquery.mask.js"></script>
     <script src="js/script.js"></script> <!--main jquery file-->
 </body>
 </html>
