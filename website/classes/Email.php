@@ -39,9 +39,9 @@
         public function sendMail() {
             try {
                 $this->mailer->send();
-                echo 'Message has been sent';
+                echo '<script>alert("E-mail enviado")</script>';
             } catch(Exception $e) {
-                echo "Message could not be sent. Mailer Error: {$this->mailer->ErrorInfo}";
+                echo '<script>alert("Erro ao enviar e-mail")</script>.';
             }
         }
     }

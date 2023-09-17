@@ -14,7 +14,7 @@
             <?php
                 // sending email using PHPMailer
                 $error = '';
-                if(isset($_POST['submit'])) {
+                if(isset($_POST['form_home'])) {
                     $email = $_POST['email'];
                     if($email == '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
                         $error = 'Insira um e-mail válido';
@@ -28,8 +28,8 @@
                 }
             ?>
             <h2>Qual o seu melhor e-mail?</h2>
-            <input type="email" name="email" placeholder="<?php echo $error; ?>" /><br>
-            <input type="submit" name="submit" value="Cadastrar" />
+            <input type="email" name="email" placeholder="<?php echo $error; ?>" required /><br>
+            <input type="submit" name="form_home" value="Cadastrar" />
         </form>
     </div>
 </section>
