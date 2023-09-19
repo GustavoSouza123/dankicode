@@ -20,7 +20,7 @@ h1 {
     text-align: center;
 }
 
-.gallery {
+.fancybox-area {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,17 +29,17 @@ h1 {
     max-width: 1400px;
 }
 
-.gallery h2 {
+.fancybox-area h2 {
     margin-bottom: 20px;
 }
 
-.gallery-content {
+.content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 }
 
-.gallery-content a {
+.content a {
     cursor: pointer;
 }
