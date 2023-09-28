@@ -23,24 +23,9 @@
 <body>
     <?php
         $url = (isset($_GET['url'])) ? $_GET['url'] : 'home';
-
-        switch($url) {
-            case 'sobre':
-                echo '<target target="sobre"></target>';
-                break;
-
-            case 'especialidades':
-                echo '<target target="especialidades"></target>';
-                break;
-
-            case 'servicos':
-                echo '<target target="servicos"></target>';
-                break;
+        if($url == 'sobre' || $url == 'especialidades' || $url == 'servicos') {
+            echo '<target target="'.$url.'"></target>';
         }
-    ?>
-
-    <?php
-        // new Email();
     ?>
 
     <header>
@@ -93,12 +78,12 @@
 
     <!-- scripts -->
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script> <!-- jQuery -->
-    <script src="<?php echo INCLUDE_PATH; ?>js/script.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/script.js"></script> <!-- main script -->
     <?php
         if($url == 'contato') {
     ?>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBtD4YdkDHevlF0iEoBpFGu1cdAslAHJ4s&callback=Function.prototype"></script> <!-- google maps -->
-    <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script> <!-- maps script -->
     <?php } ?>
 </body>
 </html>
