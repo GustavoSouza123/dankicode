@@ -20,6 +20,7 @@
             $this->mailer->SMTPSecure = 'tls';
             $this->mailer->Port = 2525;
             $this->mailer->isHTML(true);
+            $this->mailer->CharSet = 'UTF-8';
         }
 
         public function setFrom($email, $name) {
@@ -39,7 +40,7 @@
         public function sendMail() {
             try {
                 $this->mailer->send();
-                echo '<script>alert("E-mail enviado")</script>';
+                echo '<script>alert("E-mail enviado!")</script>';
             } catch(Exception $e) {
                 echo '<script>alert("Erro ao enviar e-mail")</script>.';
             }

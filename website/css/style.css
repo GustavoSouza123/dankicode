@@ -394,6 +394,11 @@ section.contact form {
     max-width: 800px;
 }
 
+section.contact .error {
+    position: absolute;
+    top: calc(70px + 400px + 15px);
+}
+
 section.contact form input,
 section.contact form textarea {
     width: 100%;
