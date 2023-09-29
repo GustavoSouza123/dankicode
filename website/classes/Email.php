@@ -3,7 +3,7 @@
 
     class Email {
         private $mailer;
-
+        
         public function __construct($host, $username, $password) {
             include('classes/PHPMailer/src/PHPMailer.php');
             include('classes/PHPMailer/src/SMTP.php');

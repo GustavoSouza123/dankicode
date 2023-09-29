@@ -28,6 +28,10 @@
         }
     ?>
 
+    <!-- include path -->
+    <input type="hidden" name="include_path" value="<?php echo INCLUDE_PATH; ?>" />
+
+    <!-- header -->
     <header>
         <div class="center">
             <div class="logo">
@@ -72,6 +76,7 @@
         }
     ?>
 
+    <!-- footer -->
     <footer>
         <p>Todos os direitos reservados</p>
     </footer>

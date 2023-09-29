@@ -10,26 +10,11 @@
         </div>
         <div class="opacity"></div>
         <div class="bullets"></div>
-        <form action="" method="post">
-            <?php
-                // sending email using PHPMailer
-                $error = '';
-                if(isset($_POST['form_home'])) {
-                    $email = $_POST['email'];
-                    if($email == '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                        $error = 'Insira um e-mail válido';
-                    } else {
-                        $phpmailer = new Email('sandbox.smtp.mailtrap.io', 'f7cdfe30941438', 'deb2ecd305f70d');
-                        $phpmailer->setFrom($email, 'User'); // sender
-                        $phpmailer->addAddress('contato@gustavosouza.com', 'Gustavo'); // recipient
-                        $phpmailer->formatEmail(array('subject'=>'Novo e-mail cadastrado', 'body'=>$email));
-                        $phpmailer->sendMail();
-                    }
-                }
-            ?>
+        <form class="home-form" action="" method="post">
             <h2>Qual o seu melhor e-mail?</h2>
-            <input type="email" name="email" placeholder="<?php echo $error; ?>" required /><br>
-            <input type="submit" name="form_home" value="Cadastrar" />
+            <input type="email" name="email" required /><br>
+            <input type="hidden" name="form_name" value="home" />
+            <input type="submit" value="Cadastrar" />
         </form>
     </div>
 </section>

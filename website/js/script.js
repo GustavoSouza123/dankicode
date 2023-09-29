@@ -1,4 +1,7 @@
 $(function() {
+    // include path
+    const include_path = $('input[name="include_path"]').val();
+
     // menu navbar
     $('html, body').click(function() {
         $('.menu-toggle').removeClass('active');
@@ -106,4 +109,18 @@ $(function() {
     }
 
     // setTimeout(boxesLogoAnimation, boxDelay * (maxBoxIndex+1));
+
+    // forms
+    $('body').on('submit', 'form', function() {
+        let form = $(this);
+        $.ajax({
+            url: include_path+'ajax/forms.php',
+            method: 'post',
+            dataType: 'json',
+            data: form.serialize()
+        }).done(function(data) {
+            console.log(data);
+        });
+        return false;
+    })
 })
