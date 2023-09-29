@@ -320,7 +320,7 @@ img.logo {
     transition: .2s;
 }
 
-img.logo:hover {
+section.expertise .box:hover img.logo {
     opacity: 1 !important;
 }
 

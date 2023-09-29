@@ -105,5 +105,5 @@ $(function() {
         }, 1000)
     }
 
-    setTimeout(boxesLogoAnimation, boxDelay * (maxBoxIndex+1));
+    // setTimeout(boxesLogoAnimation, boxDelay * (maxBoxIndex+1));
 })
