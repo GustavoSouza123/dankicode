@@ -110,7 +110,7 @@ $(function() {
 
     // setTimeout(boxesLogoAnimation, boxDelay * (maxBoxIndex+1));
 
-    // forms
+    // ajax forms
     $('body').on('submit', 'form', function() {
         let form = $(this);
         $.ajax({

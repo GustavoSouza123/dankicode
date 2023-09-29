@@ -14,13 +14,14 @@
                 $phpmailer->addAddress('contato@gustavosouza.com', 'Gustavo'); // recipient
                 $body= '';
                 foreach($_POST as $key => $value) {
-                    if($key != 'form_contato') {
+                    if($key != 'form_name') {
                         $body .= ucfirst($key).': '.$value.'<hr>';
                     }
                 }
                 $phpmailer->formatEmail(array('subject'=>'Novo e-mail do site', 'body'=>$body));
                 // $phpmailer->sendMail();
                 $data['success'] = true;
+                $data['data'] = $_POST;
             }
         } else if($_POST['form_name'] == 'contact') {
             $nome = $_POST['nome'];
@@ -35,7 +36,7 @@
                 $phpmailer->addAddress('contato@gustavosouza.com', 'Gustavo'); // recipient
                 $body= '';
                 foreach($_POST as $key => $value) {
-                    if($key != 'form_contato') {
+                    if($key != 'form_name') {
                         $body .= ucfirst($key).': '.$value.'<hr>';
                     }
                 }
