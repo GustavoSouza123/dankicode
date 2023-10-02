@@ -114,16 +114,21 @@ $(function() {
     $('body').on('submit', 'form', function() {
         let form = $(this);
         $.ajax({
+            beforeSend: function() {
+                $('.loading')
+                    .css('display', 'flex')
+                    .hide()
+                    .fadeIn();
+            },
             url: include_path+'ajax/forms.php',
             method: 'post',
             dataType: 'json',
             data: form.serialize(),
         }).done(function(data) {
             if(data.success) {
-                console.log('Email enviado com sucesso!');
             } else {
-                console.log('Ocorreu um erro ao enviar o email');
             }
+            $('.loading').fadeOut();
         });
         return false;
     })

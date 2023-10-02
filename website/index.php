@@ -31,6 +31,11 @@
     <!-- include path -->
     <input type="hidden" name="include_path" value="<?php echo INCLUDE_PATH; ?>" />
 
+    <!-- ajax loader -->
+    <div class="loading">
+        <img src="<?php echo INCLUDE_PATH; ?>ajax/ajax-loader.gif" alt="Ajax loading gif" />
+    </div>
+
     <!-- header -->
     <header>
         <div class="center">
