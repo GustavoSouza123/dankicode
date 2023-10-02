@@ -126,7 +126,9 @@ $(function() {
             data: form.serialize(),
         }).done(function(data) {
             if(data.success) {
+                // TO-DO: SHOW SUCCESS MESSAGE
             } else {
+                // TO-DO: SHOW ERROR MESSAGE
             }
             $('.loading').fadeOut();
         });
