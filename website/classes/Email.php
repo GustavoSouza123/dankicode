@@ -38,7 +38,12 @@
         }
 
         public function sendMail() {
-            $this->mailer->send();
+            try {
+                $this->mailer->send();
+                return true;
+            } catch(Exception $e) {
+                return false;
+            }
         }
     }
 ?>
