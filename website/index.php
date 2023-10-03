@@ -31,10 +31,12 @@
     <!-- include path -->
     <input type="hidden" name="include_path" value="<?php echo INCLUDE_PATH; ?>" />
 
-    <!-- ajax loader -->
+    <!-- ajax loader and form messages -->
     <div class="loading">
         <img src="<?php echo INCLUDE_PATH; ?>ajax/ajax-loader.gif" alt="Ajax loading gif" />
     </div>
+    <div class="form-message success">Formulário enviado com sucesso!</div>
+    <div class="form-message error">Ocorreu um erro ao enviar o formulário</div>
 
     <!-- header -->
     <header>

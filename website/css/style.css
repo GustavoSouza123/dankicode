@@ -6,11 +6,12 @@
 }
 
 :root {
-    --dark1: #27374D;
-    --dark2: #526D82;
-    --light1: #DDE6ED;
-    --light2: #9DB2BF;
+    --dark1: #27374d;
+    --dark2: #526d82;
+    --light1: #dde6ed;
+    --light2: #9db2bf;
     --green: #519872;
+    --red: #c70039;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Ajax loading */
+/* ajax loader and form messages */
 
 .loading {
     position: fixed;
@@ -34,6 +35,25 @@ body {
 
 .loading img {
     height: 32px;
+}
+
+.form-message {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 90px;
+    right: 5%;
+    padding: 15px 20px;
+    font-size: 14px;
+    color: var(--light1);
+}
+
+.form-message.success {
+    background-color: var(--green);
+}
+
+.form-message.error {
+    background-color: var(--red);
 }
 
 /* Boot CSS */

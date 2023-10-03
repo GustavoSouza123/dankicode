@@ -125,12 +125,18 @@ $(function() {
             dataType: 'json',
             data: form.serialize(),
         }).done(function(data) {
-            if(data.success) {
-                // TO-DO: SHOW SUCCESS MESSAGE
-            } else {
-                // TO-DO: SHOW ERROR MESSAGE
-            }
             $('.loading').fadeOut();
+            if(data.success) {
+                $('.form-message.success').fadeIn();
+                setTimeout(function() {
+                    $('.form-message.success').fadeOut();
+                }, 3000);
+            } else {
+                $('.form-message.error').fadeIn();
+                setTimeout(function() {
+                    $('.form-message.error').fadeOut();
+                }, 3000);
+            }
         });
         return false;
     })
