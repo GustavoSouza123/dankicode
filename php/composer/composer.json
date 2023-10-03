@@ -1,5 +1,6 @@
 {
     "require": {
-        "nesbot/carbon": "^2.71"
+        "nesbot/carbon": "^2.71",
+        "cagartner/correios-consulta": "^0.3.0"
     }
 }
