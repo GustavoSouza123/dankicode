@@ -21,6 +21,7 @@
     <title>Meu Website</title>
 </head>
 <body>
+    <!-- friendly url -->
     <?php
         $url = (isset($_GET['url'])) ? $_GET['url'] : 'home';
         if($url == 'sobre' || $url == 'especialidades' || $url == 'servicos') {
@@ -71,6 +72,7 @@
         </div>
     </header>
 
+    <!-- friendly url -->
     <?php
         if(file_exists('pages/'.$url.'.php')) {
             include('pages/'.$url.'.php');
