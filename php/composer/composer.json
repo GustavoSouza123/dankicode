@@ -1,6 +1,6 @@
 {
     "require": {
         "nesbot/carbon": "^2.71",
-        "cagartner/correios-consulta": "^0.3.0"
+        "symfony/translation": "^6.3"
     }
 }
