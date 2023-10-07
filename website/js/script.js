@@ -140,4 +140,19 @@ $(function() {
         });
         return false;
     })
+
+    // random attributes on the forms
+    $('form').keypress(function(event) {
+        let formName = $(this).attr('class');
+        if(event.keyCode == 1 && event.ctrlKey) {
+            $.ajax({
+                url: include_path+'ajax/faker.php',
+                method: 'post',
+                dataType: 'json',
+                data: formName
+            }).done(function(data) {
+                console.log(data);
+            });
+        }
+    })
 })
