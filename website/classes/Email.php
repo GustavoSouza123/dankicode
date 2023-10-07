@@ -1,12 +1,16 @@
 <?php
     use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+
+    require '../vendor/autoload.php';
 
     class Email {
         private $mailer;
         
         public function __construct($host, $username, $password) {
-            include('../classes/PHPMailer/src/PHPMailer.php');
-            include('../classes/PHPMailer/src/SMTP.php');
+            // include('../classes/PHPMailer/src/PHPMailer.php');
+            // include('../classes/PHPMailer/src/SMTP.php');
 
             $this->mailer = new PHPMailer(true);
 
