@@ -143,15 +143,22 @@ $(function() {
 
     // random attributes on the forms
     $('form').keypress(function(event) {
-        let formName = $(this).attr('class');
+        let postData = {formName: $(this).attr('class')};
         if(event.keyCode == 1 && event.ctrlKey) {
             $.ajax({
                 url: include_path+'ajax/faker.php',
                 method: 'post',
                 dataType: 'json',
-                data: formName
+                data: postData
             }).done(function(data) {
-                console.log(data);
+                if(postData.formName == 'home-form') {
+                    $('form input[name=email]').val(data.email);
+                } else if(postData.formName == 'contact-form') {
+                    $('form input[name=nome]').val(data.name);
+                    $('form input[name=email]').val(data.email);
+                    $('form input[name=telefone]').val(data.phone);
+                    $('form textarea[name=mensagem]').val(data.text);
+                }
             });
         }
     })
