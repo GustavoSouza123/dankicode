@@ -131,6 +131,7 @@ $(function() {
                 setTimeout(function() {
                     $('.form-message.success').fadeOut();
                 }, 3000);
+                document.querySelector('form').reset();
             } else {
                 $('.form-message.error').fadeIn();
                 setTimeout(function() {
