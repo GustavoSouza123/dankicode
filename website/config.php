@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     // autoload classes
     $autoload = function($class) {
         require_once('classes/'.$class.'.php');
@@ -7,5 +9,5 @@
 
     // website path
     define('INCLUDE_PATH', 'http://localhost/dankicode/website/');
-    /*define('INCLUDE_PATH', 'http://localhost/dankicode-courses/website/'); // => cloned repo*/
+    define('INCLUDE_PATH_PANEL', INCLUDE_PATH.'panel/');
 ?>

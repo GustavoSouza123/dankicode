@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+
+:root {
+    --dark1: #27374d;
+    --dark2: #526d82;
+    --light1: #dde6ed;
+    --light2: #9db2bf;
+    --green: #519872;
+    --red: #c70039;
+}
+
+body {
+    background-color: var(--dark1);
+    color: var(--light1);
+}
