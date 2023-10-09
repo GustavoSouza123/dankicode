@@ -32,8 +32,8 @@ $(function() {
 
     function initSlider() {
         $('.banner-img').hide();
-        $('.banner-img').eq(0).show();
-        var content = "";
+        $('.banner-img').eq(0).css('display', 'flex').hide().fadeIn(1000);
+        var content = '';
         for(var i = 0; i <= maxSlide; i++) {
             content += '<div class="bullet"></div>';
         }
@@ -49,7 +49,7 @@ $(function() {
             if(currentSlide > maxSlide) {
                 currentSlide = 0;
             }
-            $('.banner-img').eq(currentSlide).stop().fadeIn(1000);
+            $('.banner-img').eq(currentSlide).stop().css('display', 'flex').hide().fadeIn(1000);
             $('.bullets .bullet').removeClass('active');
             $('.bullets .bullet').eq(currentSlide).addClass('active');
         }, delay);
@@ -59,7 +59,7 @@ $(function() {
         var currentBullet = $(this);
         $('.banner-img').eq(currentSlide).stop().fadeOut(1000);
         currentSlide = currentBullet.index();
-        $('.banner-img').eq(currentSlide).stop().fadeIn(1000);
+        $('.banner-img').eq(currentSlide).stop().css('display', 'flex').hide().fadeIn(1000);
         $('.bullets .bullet').removeClass('active');
         currentBullet.addClass('active');
         clearInterval(slideInterval);
