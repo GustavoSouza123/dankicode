@@ -300,6 +300,11 @@ section.banner form input[type="submit"] {
     background-color: var(--green);
     border: 1px solid var(--green);
     cursor: pointer;
+    transition: .2s;
+}
+
+section.banner form input[type="submit"]:hover {
+    background-color: #519872cc;
 }
 
 

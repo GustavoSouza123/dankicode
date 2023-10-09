@@ -31,11 +31,12 @@ body {
     max-width: 400px;
     width: 90%;
     height: 400px;
-    background-color: var(--light1);
-    color: var(--dark1);
+    background-color: var(--dark2);
+    color: var(--light1);
     display: flex;
     flex-direction: column;
     padding: 60px 40px;
+    border-radius: 5px;
 }
 
 .login-box h1 {
@@ -52,21 +53,27 @@ body {
 .login-box form input {
     width: 100%;
     height: 40px;
-    background-color: var(--light1);
+    background-color: var(--dark1);
     margin-bottom: 15px;
-    border: 1px solid var(--dark2);
+    border: 1px solid var(--dark1);
+    color: var(--light1);
     border-radius: 2px;
     outline: none;
     padding: 0 10px;
 }
 
 .login-box form input::placeholder {
-    color: var(--dark2);
+    color: var(--light2);
 }
 
-.login-box form input[type="submit"]{
+.login-box form input[type="submit"] {
     background-color: var(--green);
     border: 1px solid var(--green);
     color: var(--light1);
     cursor: pointer;
+    transition: .2s;
+}
+
+.login-box form input[type="submit"]:hover {
+    background-color: #519872cc;
 }
