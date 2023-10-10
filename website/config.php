@@ -8,6 +8,7 @@
     spl_autoload_register($autoload);
 
     // website path
-    define('INCLUDE_PATH', 'http://localhost/dankicode/website/');
+    // define('INCLUDE_PATH', 'http://localhost/dankicode/website/');
+    define('INCLUDE_PATH', 'http://localhost/code/dankicode/website/'); // temporary
     define('INCLUDE_PATH_PANEL', INCLUDE_PATH.'panel/');
 ?>

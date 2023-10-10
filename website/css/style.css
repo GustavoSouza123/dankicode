@@ -428,6 +428,10 @@ section.contact .center {
     margin-bottom: 50px;
 }
 
+section.contact h2 {
+    margin-bottom: 20px;
+}
+
 section.contact form {
     display: flex;
     flex-direction: column;
