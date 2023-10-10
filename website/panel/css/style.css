@@ -27,6 +27,8 @@ body {
     justify-content: center;
 }
 
+/* login page */
+
 .login-box {
     max-width: 400px;
     width: 90%;
@@ -35,6 +37,7 @@ body {
     color: var(--light1);
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 60px 40px;
     border-radius: 5px;
 }
@@ -48,6 +51,7 @@ body {
 .login-box form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .login-box form input {
@@ -76,4 +80,29 @@ body {
 
 .login-box form input[type="submit"]:hover {
     background-color: #519872cc;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 40px;
+    margin-top: 15px;
+    padding: 0 40px;
+    font-size: 14px;
+    color: var(--light1);
+    background-color: var(--red);
+}
+
+/* control panel page */
+
+
+
+/* responsiveness */
+
+@media only screen and (max-width: 450px) {
+    .login-box {
+        padding: 60px 6%;
+    }
 }
