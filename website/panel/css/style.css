@@ -97,12 +97,270 @@ body {
 
 /* control panel page */
 
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background-color: var(--dark2);
+}
 
+header .menu-toggle {
+    position: relative;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .2s linear;
+    border-radius: 3px;
+}
+
+header .menu-toggle:hover {
+    background-color: var(--dark1);
+}
+
+header .menu-toggle .content {
+    width: 20px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .menu-toggle span {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: var(--light1);
+    transition: .2s linear;
+}
+
+header .menu-toggle.active span:nth-child(1) {
+    top: 7px;
+    transform: rotate(135deg);
+}
+header .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+header .menu-toggle.active span:nth-child(3) {
+    top: -6px;
+    transform: rotate(45deg);
+}
+
+header .btns {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 100%;
+}
+
+header .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+header .btn.home-page {
+    width: 60%;
+}
+
+header .btn.logout {
+    width: 40%;
+}
+
+header .btn:hover {
+    background-color: var(--dark1);
+}
+
+
+aside {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: var(--dark1);
+    overflow: auto;
+}
+
+aside .profile {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+aside .profile .profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--dark2);
+}
+
+aside .profile .name {
+    margin-top: 20px;
+}
+
+aside nav {
+    height: calc(100% - 250px);
+}
+
+aside nav ul {
+    height: 100%;
+}
+
+aside nav ul li {
+    list-style: none;
+    border-bottom: 2px solid var(--dark2);
+}
+
+aside nav ul li.action-title {
+    background-color: var(--dark2);
+    padding: 10px;
+}
+
+aside nav ul li.action {
+    background-color: var(--dark1);
+}
+
+aside nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    color: var(--light1);
+    text-decoration: none;
+}
+
+aside nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+main.control-panel {
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    right: 0;
+    bottom: 0;
+    background-color: var(--light2);
+    padding: 30px;
+}
+
+.opacity {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+}
+
+section {
+    background-color: var(--light1);
+    margin-bottom: 30px; /* temporary */
+    padding: 20px;
+    color: var(--dark1)
+}
+
+section h1 {
+    margin-bottom: 20px;
+}
+
+section.section1 .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.section1 .content > div {
+    width: 32%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: #fff;
+}
+
+section.section1 .content > div .title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+section.section1 .content > div:nth-child(1) {
+    background-color: #fcb039;
+}
+section.section1 .content > div:nth-child(2) {
+    background-color: #f0674c;
+}
+section.section1 .content > div:nth-child(3) {
+    background-color: #0088f1;
+}
+
+section.section2 .content,
+section.section3 .content {
+    width: 100%;
+    padding: 20px;
+    background-color: #4db6ac;
+}
 
 /* responsiveness */
 
+/* login page */
 @media only screen and (max-width: 450px) {
     .login-box {
         padding: 60px 6%;
+    }
+}
+
+/* control panel page */
+@media only screen and (max-width: 950px) {
+    section.section1 .content {
+        flex-direction: column;
+    }
+
+    section.section1 .content > div {
+        width: 100%;
+        height: 100px;
+    }
+
+    section.section1 .content .visits-total {
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    header {
+        padding: 0 10px;
+    }
+
+    section h1 {
+        font-size: 18px;
+    }
+
+    aside {
+        top: 50px;
+        left: -250px;
+    }
+
+    header,
+    main.control-panel {
+        left: 0;
     }
 }
