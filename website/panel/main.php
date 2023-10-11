@@ -19,7 +19,7 @@
     <title>Painel de controle</title>
 </head>
 <body>
-    <!-- <h2>Bem vindo ao painel de controle, <?php echo ucfirst($_SESSION['user']); ?>!</h2> -->
+    <!-- <h2>Bem vindo ao painel de controle, <?php // echo ucfirst($_SESSION['user']); ?>!</h2> -->
 
     <header>
         <div class="menu-toggle">
@@ -72,7 +72,7 @@
 
     <main class="control-panel">
         <div class="opacity"></div>
-        
+
         <section class="section1">
             <h1>Painel de Controle - Website</h1>
             <div class="content">
