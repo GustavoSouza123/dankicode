@@ -21,6 +21,11 @@
 <body>
     <!-- <h2>Bem vindo ao painel de controle, <?php // echo ucfirst($_SESSION['user']); ?>!</h2> -->
 
+    <!-- loader -->
+    <div class="loading">
+        <img src="<?php echo INCLUDE_PATH; ?>ajax/ajax-loader.gif" alt="Ajax loading gif" />
+    </div>
+    
     <header>
         <div class="menu-toggle">
             <div class="content">
