@@ -1,3 +1,4 @@
 # composer files and directories
 composer.phar
 /vendor/
+notes.txt
