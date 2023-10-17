@@ -28,9 +28,12 @@
             $sql = $pdo->prepare("SELECT * FROM `tb_admin_users` WHERE user = ? AND password = ?");
             $sql->execute(array($user, $password));
             if($sql->rowCount() == 1) {
+                $info = $sql->fetch();
                 $_SESSION['login'] = true;
                 $_SESSION['user'] = $user;
                 $_SESSION['password'] = $password;
+                $_SESSION['name'] = $info['name'];
+                $_SESSION['role'] = Panel::getRole($info['role']);
                 header('Location: '.INCLUDE_PATH_PANEL);
                 die();
             } else {

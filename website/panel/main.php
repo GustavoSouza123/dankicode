@@ -25,8 +25,6 @@
     <title>Painel de controle</title>
 </head>
 <body>
-    <!-- <h2>Bem vindo ao painel de controle, <?php // echo ucfirst($_SESSION['user']); ?>!</h2> -->
-
     <!-- loader -->
     <div class="loading">
         <img src="<?php echo INCLUDE_PATH; ?>ajax/ajax-loader.gif" alt="Ajax loading gif" />
@@ -58,7 +56,8 @@
             <div class="profile-photo">
                 <img src="../images/user.png" alt="User profile photo" />
             </div>
-            <div class="name"><?php echo ucfirst($_SESSION['user']); ?></div>
+            <div class="name"><?php echo ucfirst($_SESSION['name']); ?></div>
+            <div class="role"><?php echo ucfirst($_SESSION['role']); ?></div>
         </div>
 
         <nav>

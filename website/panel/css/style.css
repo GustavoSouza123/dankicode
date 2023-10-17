@@ -252,6 +252,11 @@ aside .profile .name {
     margin-top: 20px;
 }
 
+aside .profile .role {
+    margin-top: 5px;
+    color: var(--light2);
+}
+
 aside nav {
     height: calc(100% - 250px);
 }
