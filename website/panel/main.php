@@ -36,14 +36,14 @@
         </div>
 
         <div class="btns">
-            <div class="btn home-page">
+            <a class="btn home-page">
                 <!-- icon -->
                 Página Inicial
-            </div>
-            <div class="btn logout">
+            </a>
+            <a class="btn logout" href="?logout">
                 <!-- icon -->
-                <p>Sair</p>
-            </div>
+                Sair
+            </a>
         </div>
     </header>
 
