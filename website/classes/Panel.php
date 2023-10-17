@@ -11,11 +11,11 @@
 
         public static function getRole($role) {
             $roles = [
-                '0' => 'Employee',
-                '1' => 'Sub administrator',
-                '2' => 'Administrator'
+                '0' => 'Funcionário',
+                '1' => 'Sub administrador',
+                '2' => 'Administrador'
             ];
-
+            
             return $roles[$role];
         }
     }
