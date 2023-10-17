@@ -1,3 +1,9 @@
+<?php
+    if(isset($_GET['logout'])) {
+        Panel::logout();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +55,9 @@
 
     <aside>
         <div class="profile">
-            <div class="profile-photo"></div>
+            <div class="profile-photo">
+                <img src="../images/user.png" alt="User profile photo" />
+            </div>
             <div class="name"><?php echo ucfirst($_SESSION['user']); ?></div>
         </div>
 

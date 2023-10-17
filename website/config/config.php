@@ -10,7 +10,8 @@
     /* constants variables */
 
     // website paths
-    define('INCLUDE_PATH', 'http://localhost/dankicode/website/');
+    // define('INCLUDE_PATH', 'http://localhost/dankicode/website/');
+    define('INCLUDE_PATH', 'http://localhost/code/dankicode/website/');
     define('INCLUDE_PATH_PANEL', INCLUDE_PATH.'panel/');
 
     // database connection
