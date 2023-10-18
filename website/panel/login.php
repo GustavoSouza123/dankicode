@@ -34,6 +34,7 @@
                 $_SESSION['password'] = $password;
                 $_SESSION['name'] = $info['name'];
                 $_SESSION['role'] = Panel::getRole($info['role']);
+                $_SESSION['img'] = $info['img'];
                 header('Location: '.INCLUDE_PATH_PANEL);
                 die();
             } else {

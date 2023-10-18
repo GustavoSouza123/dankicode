@@ -37,10 +37,10 @@
                 <span></span>
                 <span></span>
             </div>
-        </div>
+         </div>
 
         <div class="btns">
-            <a class="btn home-page">
+<a class="btn home-page" href="<?php echo INCLUDE_PATH; ?>" target="_blank">
                 <!-- icon -->
                 Página Inicial
             </a>
@@ -53,9 +53,19 @@
 
     <aside>
         <div class="profile">
-            <div class="profile-photo">
-                <img src="../images/user.png" alt="User profile photo" />
-            </div>
+                <?php
+                    if($_SESSION['img'] == '') {
+                ?>
+                <div class="profile-photo">
+                    <img src="../images/user.png" alt="User profile photo" />
+                </div>
+                <?php
+                    } else {
+                ?>
+                <div class="profile-photo">
+                    <img src="<?php echo INCLUDE_PATH_PANEL; ?>uploads/<?php echo $_SESSION['img']; ?>" alt="User profile photo" />
+                </div>
+                <?php } ?>
             <div class="name"><?php echo ucfirst($_SESSION['name']); ?></div>
             <div class="role"><?php echo ucfirst($_SESSION['role']); ?></div>
         </div>
